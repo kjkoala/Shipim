@@ -1,0 +1,112 @@
+.wrapper {
+    margin-top: 17px;
+}
+
+.cell {
+    display: flex;
+    gap: 9px;
+    margin-bottom: 14px;
+
+    &.big {
+        height: 80px;
+    }
+}
+
+.section {
+    background: #fff;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 11px 30px;
+
+    &_grow {
+        flex-grow: 1;
+    }
+
+    &_block {
+        display: flex;
+        flex-basis: 150px;
+        
+        &:not(:first-child) {
+            justify-content: center;
+        }
+    }
+}
+
+.checkbox {
+    appearance: none;
+    border-radius: 6px;
+    background: #D1D5DB;
+    width: 18px;
+    height: 18px;
+
+    &:checked {
+        background: #CCE3FF url('./icons/check.svg') no-repeat center;
+    }
+}
+
+.manage {
+    background: url('./icons/triangle.svg') no-repeat right;
+    padding-right: 10px;
+    background-position-y: 5px;
+}
+
+.number_order {
+    color: #175FFF;
+    font-weight: 700;
+    text-decoration: underline;
+}
+
+.date {
+    font-size: 14px;
+    display: flex;
+    gap: 8px;
+}
+
+.time {
+    opacity: 0.4;
+}
+
+.marketplace, .city, .amount {
+    color: #49494B;
+}
+
+.city {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    & .district {
+        opacity: 0.4;
+        font-size: 12px;
+    }
+}
+
+.status {
+    &.success {
+        color: #5ACA93;
+    }
+
+    &.fail {
+        color: #FF855F;
+    }
+}
+
+.pay {
+    width: 18px;
+    height: 17px;
+    background-repeat: no-repeat;
+    background-position: center;
+    &.success {
+        background-image: url('./icons/wallet_success.svg');
+    }
+
+    &.fail {
+        background-image: url('./icons/wallet_fail.svg');
+    }
+}
+
+.amount:after {
+    content: '\20BD';
+    margin-left: 7px;
+}
